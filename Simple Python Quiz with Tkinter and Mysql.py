@@ -1,13 +1,11 @@
     #Simple Python Quiz with Tkinter and Mysql
 #module used in the program(tkinter and mysql connector for GUI
 #and using database for recording and totaling quiz marks)
-from multiprocessing.dummy import Process
 from tkinter import *
-import tkinter
+import time
 from PIL import Image
 from PIL import ImageTk
 import mysql.connector
-import turtle
 
 #connecting to Mysql 
 mydb = mysql.connector.connect(host="localhost",
@@ -24,47 +22,25 @@ root = Tk()
 root.title('Simple Python Quiz with Tkinter and Mysql')
 root.configure(background = "#f04d75")
 root.minsize(height= 500,width=800)
-quiz_img = Image.open('hehe.png')
+quiz_img = Image.open('Logo.png')
 render = ImageTk.PhotoImage(quiz_img)
 img =Label(root,image=render,background= "#f04d75")
 img.place(x=250,y=80)
 
-#Creating quiz timer
-canvas = tkinter.Canvas(master = root,width=150,height=150,highlightbackground="#f04d75")
-canvas.place(x=10,y=15)
-draw = turtle.RawTurtle(canvas)
-draw.getscreen().bgcolor("#f04d75")
-draw.speed(4)
-
-#timer 
+#timer
 def timer():
-    
-    draw.up()
-    draw.hideturtle()
-    draw.sety(-48)
-    draw.setx(10)
-    draw.fillcolor('blue')
-    draw.begin_fill()
-    def new():
-        draw.circle(60,extent=72)
-        draw.left(90) 
-        draw.forward(60)
-    for i in range(5):
-        new() 
-        draw.end_fill()  
-        draw.fillcolor('blue')
-        draw.begin_fill()
-        draw.backward(60)  
-        draw.right(90)
-    draw.sety(-48)
-    draw.setx(10)
-    draw.fillcolor('#f04d75')
-    draw.circle(80,360)
-    draw.end_fill()
+
+    L = [6,5,4,3,2,1]
+    for i in L:
+        Initial = Label(root,text= i, font=('arial',70),bg= '#f04d75',fg="#4df0bc")
+        Initial.place(x=90,y=90)
+        Initial.after(1)
+        Initial.destroy()
+        time.sleep(0.5)
 
 #Greetings tab
 def Start_tab():
-    draw.hideturtle()
+
     global title
     title = Label(root,text="To Play Press Start", font=('arial',40),bg= '#f04d75')
     title.pack(side=TOP)
@@ -75,6 +51,7 @@ def Start_tab():
 
 #fist question
 def tab1():
+
     img.destroy()
     title.destroy()
     start_button.destroy()
@@ -202,6 +179,7 @@ def tab2():
 
 #Question3
 def tab3():
+
     lable_correct.destroy()
     lable_incorrect.destroy()
     label2.destroy()
@@ -251,6 +229,7 @@ def tab3():
     
 #Question4
 def tab4():
+
     lable_correct.destroy()
     lable_incorrect.destroy()
     label3.destroy()
@@ -430,7 +409,7 @@ def tab7():
         mydb.commit()
     global label7
     label7 = Label(root,text = '''Which of the following is the correct command 
-    to exit from an interpreter in pyhton ? ''',font=('arial',25),bg= '#f04d75')
+    to exit from an interpreter in python ? ''',font=('arial',25),bg= '#f04d75')
     label7.pack()
     global button25
     button25=Button(root, text="exit()", command= correct,\
@@ -811,8 +790,8 @@ def tab14():
         my_cursor.execute("insert into marks values(14,0)")
         mydb.commit()
     global label14
-    label14 = Label(root,text = '''How do you start writing a while\
-     loop in Python?''',font=('arial', 25),bg= '#f04d75')
+    label14 = Label(root,text = '''How do you start writing a while
+    loop in Python?''',font=('arial', 25),bg= '#f04d75')
     label14.pack()
     global button53
     button53=Button(root, text='''if x > y:''', command= correct,\
@@ -886,7 +865,7 @@ def tab15():
     button60.pack(side= BOTTOM)
     button60.after(5000,result_tab)
     timer()
-    
+
 #To show the final resutl(marks scored in quiz)
 def result_tab():
 
