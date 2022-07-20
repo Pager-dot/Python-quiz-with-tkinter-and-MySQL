@@ -30,7 +30,7 @@ img.place(x=250,y=80)
 #timer
 def timer():
 
-    L = [6,5,4,3,2,1]
+    L = [5,4,3,2,1]
     for i in L:
         Initial = Label(root,text= i, font=('arial',70),bg= '#f04d75',fg="#4df0bc")
         Initial.place(x=90,y=90)
@@ -107,7 +107,7 @@ def tab1():
 
     #next button(to move to next question)
     global button4
-    button4 = Button(root,text = 'Next', command= tab2 , font=('arial', 20))
+    button4 = Button(root,text = 'Skip', command= tab2 , font=('arial', 20))
     button4.pack(side= BOTTOM)
     button4.after(5000,tab2)
     
@@ -171,7 +171,7 @@ def tab2():
     above''', command= correct,font=('arial', 20),height= 3, width=9)
     button7.place(relx=0.7,rely=0.5)
     global button8
-    button8 = Button(root,text = 'Next' , command= tab3,\
+    button8 = Button(root,text = 'Skip' , command= tab3,\
         font=('arial', 20))
     button8.pack(side= BOTTOM)
     button8.after(5000,tab3)
@@ -222,7 +222,7 @@ def tab3():
         font=('arial', 20),height= 2, width=12)
     button11.place(relx=0.68,rely=0.4)
     global button12
-    button12 = Button(root,text = 'Next' , command= tab4,font=('arial', 20))
+    button12 = Button(root,text = 'Skip' , command= tab4,font=('arial', 20))
     button12.pack(side= BOTTOM)
     button12.after(5000,tab4)
     timer()
@@ -272,7 +272,7 @@ def tab4():
         font=('arial', 20),height= 2, width=8)
     button15.place(relx=0.7,rely=0.4)
     global button16
-    button16 = Button(root,text = 'Next', command= tab5,\
+    button16 = Button(root,text = 'Skip', command= tab5,\
         font=('arial', 20))
     button16.pack(side= BOTTOM)
     button16.after(5000,tab5)
@@ -323,7 +323,7 @@ def tab5():
         font=('arial',20),height=2,width=12)
     button19.place(relx=0.68,rely=0.4)
     global button20
-    button20 = Button(root,text = 'Next', command= tab6,font=('arial', 20))
+    button20 = Button(root,text = 'Skip', command= tab6,font=('arial', 20))
     button20.pack(side= BOTTOM)
     button20.after(5000,tab6)
     timer()
@@ -373,7 +373,7 @@ def tab6():
         font=('arial',20),height=2,width=3)
     button23.place(relx=0.8,rely=0.4)
     global button24
-    button24 = Button(root,text = 'Next' , command= tab7,\
+    button24 = Button(root,text = 'Skip' , command= tab7,\
         font=('arial', 20))
     button24.pack(side= BOTTOM)
     button24.after(5000,tab7)
@@ -424,7 +424,7 @@ def tab7():
         font=('arial',20),height=2,width=4)
     button27.place(relx=0.75,rely=0.4)
     global button28
-    button28 = Button(root,text = 'Next' ,command= tab8,\
+    button28 = Button(root,text = 'Skip' ,command= tab8,\
         font=('arial',20))
     button28.pack(side= BOTTOM)
     button28.after(5000,tab8)
@@ -475,7 +475,7 @@ def tab8():
         font=('arial',20),height=2,width=9)
     button31.place(relx=0.7,rely=0.4)
     global button32
-    button32 = Button(root,text = 'Next' , command= tab9,\
+    button32 = Button(root,text = 'Skip' , command= tab9,\
         font=('arial',20))
     button32.pack(side= BOTTOM)
     button32.after(5000,tab9)
@@ -534,7 +534,7 @@ def tab9():
     button35.place(relx=0.7,rely=0.5)
 
     global button36
-    button36 = Button(root,text = 'Next' ,command= tab10,\
+    button36 = Button(root,text = 'Skip' ,command= tab10,\
         font=('arial',20))
     button36.pack(side= BOTTOM)
     button36.after(5000,tab10)
@@ -588,7 +588,7 @@ def tab10():
         font=('arial', 20),height= 2, width=6)
     button39.place(relx=0.73,rely=0.4)
     global button40
-    button40 = Button(root,text = 'Next' ,\
+    button40 = Button(root,text = 'Skip' ,\
          command= tab11,font=('arial', 20))
     button40.pack(side= BOTTOM)
     button40.after(5000,tab11)
@@ -644,7 +644,7 @@ def tab11():
         font=('arial', 20),height= 2, width=11)
     button43.place(relx=0.67,rely=0.4)
     global button44
-    button44 = Button(root,text = 'Next' ,\
+    button44 = Button(root,text = 'Skip' ,\
         command=tab12, font=('arial', 20))
     button44.pack(side= BOTTOM)
     button44.after(5000,tab12)
@@ -698,7 +698,7 @@ def tab12():
         font=('arial', 20),height= 2, width=11)
     button47.place(relx=0.67,rely=0.4)
     global button48
-    button48 = Button(root,text = 'Next' ,\
+    button48 = Button(root,text = 'Skip' ,\
         command=tab13, font=('arial', 20))
     button48.pack(side= BOTTOM)
     button48.after(5000,tab13)
@@ -752,7 +752,7 @@ def tab13():
         font=('arial', 20),height= 2, width=12)
     button51.place(relx=0.68,rely=0.4)
     global button52
-    button52 = Button(root,text = 'Next' ,\
+    button52 = Button(root,text = 'Skip' ,\
         command=tab14, font=('arial', 20))
     button52.pack(side= BOTTOM)
     button52.after(5000,tab14)
@@ -806,7 +806,7 @@ def tab14():
         font=('arial', 20),height= 2, width=8)
     button55.place(relx=0.7,rely=0.4)
     global button56
-    button56 = Button(root,text = 'Next' ,\
+    button56 = Button(root,text = 'Skip' ,\
         command=tab15, font=('arial', 20))
     button56.pack(side= BOTTOM)
     button56.after(5000,tab15)
