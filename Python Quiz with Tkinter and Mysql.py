@@ -1,4 +1,4 @@
-    #Simple Python Quiz with Tkinter and Mysql
+    #Python Quiz with Tkinter and Mysql
 #module used in the program(tkinter and mysql connector for GUI
 #and using database for recording and totaling quiz marks)
 from tkinter import *
