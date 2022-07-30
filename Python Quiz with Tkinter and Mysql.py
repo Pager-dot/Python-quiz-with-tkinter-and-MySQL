@@ -23,7 +23,7 @@ def timer(timer_Count):
 #connecting to Mysql 
 mydb = mysql.connector.connect(host="localhost",
                                 user="root",
-                                passwd="paritosh")
+                                passwd="podar123")
 my_cursor = mydb.cursor()
 my_cursor.execute("Drop DATABASE IF EXISTS quizmarks")
 my_cursor.execute("CREATE DATABASE IF NOT EXISTS quizmarks")
